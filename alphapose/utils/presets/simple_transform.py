@@ -114,7 +114,7 @@ class SimpleTransform(object):
             cropped_img (Tensor[K, C, output_size[0], output_size[1]])
             boxes (Tensor[K, 4]): new box coordinates
         """
-        tensor_img = im_to_torch(image)
+        tensor_img = im_to_torch(image).contiguous()
         tensor_img[0].add_(-0.406)
         tensor_img[1].add_(-0.457)
         tensor_img[2].add_(-0.480)
