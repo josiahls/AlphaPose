@@ -107,6 +107,6 @@ def unzip_objs(objs):
         tlwhs, ids, scores = zip(*objs)
     else:
         tlwhs, ids, scores = [], [], []
-    tlwhs = np.asarray(tlwhs, dtype=float).reshape(-1, 4)
+    tlwhs = np.asarray(tlwhs, dtype=np.float64).reshape(-1, 4)
 
     return tlwhs, ids, scores
